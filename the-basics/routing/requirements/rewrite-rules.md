@@ -61,7 +61,7 @@ Please note that URL rewriting is handled by an optional module in IIS. More inf
                <rule name="Application Administration" stopProcessing="true">
                     <match url="^(.*)$" />
                     <conditions logicalGrouping="MatchAll">
-                        <add input="{SCRIPT_NAME}" pattern="^/(.*(CFIDE|cfide|CFFormGateway|jrunscripts|lucee|railo-context|fckeditor)).*$" ignoreCase="false" />
+                        <add input="{PATH_INFO}" pattern="^/(.*(CFIDE|cfide|CFFormGateway|jrunscripts|lucee|railo-context|fckeditor)).*$" ignoreCase="false" />
                     </conditions>
                     <action type="None" />
                 </rule>
